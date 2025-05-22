@@ -1,0 +1,46 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1> Number Guessing Game</h1>
+   <button id="themeToggle" onclick="toggleTheme()">🌙 Toggle Dark Mode</button><br>
+
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty" onchange="setDifficulty()">
+      <option value="easy">Easy (1–50)</option>
+      <option value="medium" selected>Medium (1–100)</option>
+      <option value="hard">Hard (1–200)</option>
+    </select>
+
+    <p id="rangeText">Guess a number between 1 and 100</p>
+    <p id="timer"> Time Left: 60s</p>
+    <p>Attempts left: <span id="attemptsLeft">7</span></p>
+
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="message"></p>
+    <button onclick="resetGame()" class="reset-btn">Reset Game</button>
+  </div>
+
+  <audio id="sound-correct" src="sounds/correct.mp3"></audio>
+  <audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+  <audio id="sound-timeout" src="sounds/timeout.mp3"></audio>
+
+  <script src="app.js"></script>
+
+<audio id="sound-correct" src="sounds/correct.mp3"></audio>
+<audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+<audio id="sound-timeout" src="sounds/timeout.mp3"></audio>
+
+</body>
+</html>
